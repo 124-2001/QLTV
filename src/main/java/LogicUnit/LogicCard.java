@@ -30,10 +30,14 @@ public class LogicCard {
         card.setBook_code(bookCode);
         System.out.print("Nhap ngay muon sach (1-30) :");
         int startDay = sc.nextInt();
+        if(0<startDay || startDay>30){
+            System.out.print("Nhap lai ngay muon sach : ");
+            startDay = sc.nextInt();
+        }
         card.setStart_day(startDay);
         System.out.print("Nhap ngay tra sach (1-30) :");
         int endDay = sc.nextInt();
-        while (endDay<=startDay){
+        while (endDay<=startDay || startDay<32){
             System.out.print("Nhap lai ngay tra sach : ");
             endDay = sc.nextInt();
         }
